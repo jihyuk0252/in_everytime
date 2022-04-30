@@ -22,9 +22,9 @@ function Register({ history }) {
   });
 
   const { userId, userPw, userEmail, userNickname, usableId } = inputs;
-  const [option, setOption] = useState("2021");
-  const [schoolInput, setSchoolInput] = useState("");
-  const [showSchoolList, setShowSchoolList] = useState(true);
+  const [option] = useState("2021");
+  const [schoolInput] = useState("");
+  const [showSchoolList] = useState(true);
   const [overIdLength, setOverIdLength] = useState(false);
   const [overPwLength, setOverPwLength] = useState(false);
 
@@ -70,21 +70,6 @@ function Register({ history }) {
         console.log(error);
         alert("다른 아이디를 입력해주세요");
       });
-  };
-
-  const handleOption = (e) => {
-    setOption(e.target.value);
-  };
-
-  const handleSearch = (e) => {
-    setShowSchoolList(true);
-    setSchoolInput(e.target.value);
-  };
-
-  const handleSearchClick = (e) => {
-    e.preventDefault();
-    setSchoolInput(e.target.textContent);
-    setShowSchoolList(false);
   };
 
   const SignUp = (e) => {
